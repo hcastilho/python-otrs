@@ -146,7 +146,7 @@ class GenericTicketConnector(object):
         @returns       : a string, wrapping element within the request tags
 
         """
-        return SOAP_ENVELOPPE.format(etree.tostring(element))
+        return SOAP_ENVELOPPE.format(etree.tostring(element, encoding='utf-8'))
 
     def session_create(self, password, user_login=None,
                                        customer_user_login=None):

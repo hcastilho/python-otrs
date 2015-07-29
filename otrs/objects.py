@@ -86,9 +86,7 @@ class OTRSObject(object):
         root = etree.Element(self.XML_NAME)
         for k, v in self.attrs.items():
             e = etree.Element(k)
-            if isinstance(v, unicode):
-                v = v.encode('utf-8')
-            e.text = str(v)
+            e.text = v
             root.append(e)
         return root
 
