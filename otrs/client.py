@@ -42,7 +42,7 @@ def authenticated(func):
         return func(self,*args, **kwargs)
     return add_auth
 
-SOAP_ENVELOPPE = u"""
+SOAP_ENVELOPPE = """
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns="http://www.otrs.org/TicketConnector/">
   <soapenv:Header/>
